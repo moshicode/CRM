@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
 import Moment from 'react-moment';
 
-// Row, not Rows
-class ClientsRows extends Component {
+class ClientsRow extends Component {
 
     onClickRow = (e) => {
         this.props.switchPopup();
@@ -31,4 +30,4 @@ class ClientsRows extends Component {
     }
 }
 
-export default ClientsRows;
+export default ClientsRow;

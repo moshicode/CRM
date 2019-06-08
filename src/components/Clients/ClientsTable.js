@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import ClientsHeader from './ClientsTableHeader.js';
-import ClientsRows from './ClientsTableRows.js';
+import ClientsRow from './ClientsTableRow.js';
 import ClientsFilterTable from './ClientsFilterTable';
 
 class ClientsTable extends Component {
@@ -26,7 +26,7 @@ class ClientsTable extends Component {
                 < ClientsHeader />
                 <div className="table-body">
                     {currentPageData.map((d, index) =>
-                        <ClientsRows key={index} data={d} switchPopup={this.props.switchPopup} setCurrentID={this.props.setCurrentID} />)}
+                        <ClientsRow key={index} data={d} switchPopup={this.props.switchPopup} setCurrentID={this.props.setCurrentID} />)}
                 </div>
             </div>
         );
