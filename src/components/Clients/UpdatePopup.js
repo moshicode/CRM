@@ -25,7 +25,7 @@ class UpdatePopup extends Component {
 
     updateClientDatabase = async () => {
         let fullName = this.state.firstname + ' ' + this.state.surname
-        await axios.put('http://localhost:8000/updateclient/' + this.props.selectedClient._id,
+        await axios.put('http://localhost:8000/clients/' + this.props.selectedClient._id,
             {
                 name: fullName,
                 country: this.state.country

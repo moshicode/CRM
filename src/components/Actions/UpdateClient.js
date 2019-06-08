@@ -17,7 +17,7 @@ class UpdateClient extends Component {
     // Create one mehod instead of all three, pass what you want to update as a parameter
     onTransfer = async () => {
         if (this.state.owner) {
-            await axios.put('http://localhost:8000/updateclient/' + this.state._id,
+            await axios.put('http://localhost:8000/clients/' + this.state._id,
                 {
                     owner: this.state.owner
                 })
@@ -26,7 +26,7 @@ class UpdateClient extends Component {
 
     onSend = async () => {
         if (this.state._id && this.state.emailType) {
-            await axios.put('http://localhost:8000/updateclient/' + this.state._id,
+            await axios.put('http://localhost:8000/clients/' + this.state._id,
                 {
                     emailType: this.state.emailType
                 })
@@ -35,7 +35,7 @@ class UpdateClient extends Component {
 
     onDeclare = async () => {
         if (this.state._id) {
-            await axios.put('http://localhost:8000/updateclient/' + this.state._id,
+            await axios.put('http://localhost:8000/clients/' + this.state._id,
                 {
                     sold: !this.props.data.sold
                 })

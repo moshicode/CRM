@@ -14,7 +14,7 @@ class AddClient extends Component {
 
     addClientDatabase = async () => {
         let fullName = this.state.firstname + ' ' + this.state.surname
-        await axios.post('http://localhost:8000/addclient',
+        await axios.post('http://localhost:8000/clients',
             {
                 name: fullName,
                 country: this.state.country,
