@@ -24,5 +24,4 @@ router.put('/clients/:id', function (req, res) {
     })
 })
 
-
 module.exports = router
