@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Loading = () => {
+export default () => {
     return (
         <div className="spinner-block">
             <div className="spinner">
@@ -10,4 +10,3 @@ const Loading = () => {
         </div>
     );
 }
-export default Loading;
