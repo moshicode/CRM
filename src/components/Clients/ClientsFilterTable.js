@@ -5,7 +5,7 @@ class ClientsFilterTable extends Component {
         super()
         this.state = {
             searchQuery: '',
-            type: 'name'
+            type: 'default'
         }
     }
 
@@ -23,8 +23,12 @@ class ClientsFilterTable extends Component {
         return (
             <div className="table-filter">
                 <div className="search-section">
-                    <input type="text" name="searchQuery" placeholder="Search..." value={this.state.searchQuery} onChange={this.changeSearchQuery} />
-                    <select name="type" onChange={this.changeSearchQuery}>
+                    {this.state.type !== 'default' ?
+                        <input type="text" name="searchQuery" placeholder="Search..." value={this.state.searchQuery} onChange={this.changeSearchQuery} />
+                        : ''
+                    }
+                    <select name="type" value={this.state.type} onChange={this.changeSearchQuery}>
+                        <option value="default" disabled hidden>Filter By:</option>
                         <option value="sold" >Sold</option>
                         <option value="name" >Name</option>
                         <option value="emailType" >Email</option>

@@ -43,6 +43,7 @@ class ClientsTable extends Component {
 
     render() {
         const currentPageData = this.props.data.slice(this.state.pageRange.first, this.state.pageRange.last)
+
         return (
             <div className="table-section">
                 <ClientsFilterTable

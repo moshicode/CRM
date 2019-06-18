@@ -13,14 +13,17 @@ class Clients extends Component {
             currentID: '',
             isLoading: true,
             searchQuery: '',
-            type: 'name'
+            type: 'default'
         }
     }
 
     handleFilter = () => {
         let { type, data, searchQuery } = this.state
-        if (type === 'name') {
-            return data.filter(c => c[type].split(' ')[0].includes(searchQuery))
+        if (type === 'default') {
+            return data
+        } else if (type === 'name') {
+            console.log(data)
+            return data.filter(c => c[type].toLowerCase().split(' ')[0].includes(searchQuery.toLowerCase()))
         } else if (type === 'sold') {
             return data.filter(c => c[type] === true).filter(c => c.name.split(' ')[0].includes(searchQuery))
         } else {

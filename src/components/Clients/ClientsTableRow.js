@@ -14,7 +14,6 @@ class ClientsRow extends Component {
 
     render() {
         let { name, firstContact, emailType, sold, owner, country } = this.props.data
-
         return (
             <div className="table-row" onClick={this.onClickRow}>
                 <div>{name.split(' ')[0]}</div>
@@ -25,7 +24,6 @@ class ClientsRow extends Component {
                 <div>{sold ? <i className="fas fa-check"></i> : '-'}</div>
                 <div>{owner}</div>
             </div>
-
         );
     }
 }
