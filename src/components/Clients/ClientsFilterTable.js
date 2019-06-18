@@ -9,15 +9,6 @@ class ClientsFilterTable extends Component {
         }
     }
 
-    back = () => {
-        this.props.setPagination(-20)
-    }
-
-    forward = () => {
-        this.props.setPagination(20)
-    }
-
-
     changeSearchQuery = async (e) => {
         e.preventDefault()
         await this.setState({ [e.target.name]: e.target.value })
@@ -42,9 +33,9 @@ class ClientsFilterTable extends Component {
                     </select>
                 </div>
                 <div className="pagination-section">
-                    <span><i className="fas fa-angle-left" onClick={this.back}></i></span>
-                    <span>1-20</span>
-                    <span><i className="fas fa-angle-right" onClick={this.forward}></i></span>
+                    <span><i className="fas fa-angle-left" onClick={this.props.moveBackward}></i></span>
+                    <span>{this.props.pageRange.first} - {this.props.pageRange.last}</span>
+                    <span><i className="fas fa-angle-right" onClick={this.props.moveForward}></i></span>
                 </div>
             </div>
         );

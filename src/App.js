@@ -14,16 +14,6 @@ class App extends Component {
     }
   }
 
-  // updateClientData = (index, name, surname, country) => {
-  //   const data = [...this.state.data];
-  //   data[index].name = name;
-  //   data[index].surname = surname;
-  //   data[index].country = country;
-  //   this.setState({
-  //     data: data
-  //   })
-  // }
-
   /*
   // Request API with local dummy data
     async componentDidMount() {

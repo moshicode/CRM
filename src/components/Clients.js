@@ -4,7 +4,6 @@ import ClientsTable from './Clients/ClientsTable';
 import UpdatePopup from './Clients/UpdatePopup';
 import Loading from './Loading';
 
-
 class Clients extends Component {
     constructor() {
         super()
@@ -39,7 +38,6 @@ class Clients extends Component {
     async getClients() {
         return await axios.get("http://localhost:8000/clients")
     }
-
 
     async componentDidMount() {
         const res = await this.getClients()
